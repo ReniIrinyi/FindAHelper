@@ -1,0 +1,11 @@
+.idea/
+.iml/
+client/node_modules/
+client/dist/
+api/build/
+api/.gradle/
+.gradle/
+gradlew
+gradlew.bat
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
