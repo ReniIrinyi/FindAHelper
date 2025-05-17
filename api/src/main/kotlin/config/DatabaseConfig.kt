@@ -12,7 +12,7 @@ import java.io.File
 
 object DatabaseConfig {
     fun init(app: Application) {
-        val fileConfig = ConfigFactory.parseFile(File("src/main/resources/application.conf"))
+        val fileConfig = ConfigFactory.load()
         val dbUrl = fileConfig.getString("database.url")
         val user =fileConfig.getString("database.user")
         val password =  fileConfig.getString("database.password")

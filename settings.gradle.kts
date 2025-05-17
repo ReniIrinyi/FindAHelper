@@ -5,7 +5,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "FindAHelper"
+rootProject.name = "find-a-helper"
 
-include("api")
+include("api", "client")
 include("client")

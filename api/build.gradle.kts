@@ -48,8 +48,23 @@ java {
     }
 }
 
+ktor{
+    fatJar {
+        archiveFileName = "api.jar"
+    }
+}
+
 kotlin {
     jvmToolchain(21)
+}
+
+tasks.named("distTar"){
+    dependsOn(tasks.named("shadowJar"))
+}
+
+tasks.named("shadowJar"){
+    dependsOn(tasks.named("distZip"))
+    dependsOn(tasks.named("startScripts"))
 }
 
 tasks.register<JavaExec>("runBackend") {

@@ -26,7 +26,7 @@ fun main() {
         }
         install(Authentication) {
             jwt("auth-jwt") {
-                val config = ConfigFactory.parseFile(File("src/main/resources/application.conf"))
+                val config = ConfigFactory.load()
                 val secret = config.getString("jwt.secret")
                 val algorithm = Algorithm.HMAC256(secret)
                 verifier(
